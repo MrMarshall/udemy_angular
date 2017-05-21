@@ -14,10 +14,10 @@ router.get('/', function (req, res, next) {
 router.post('/', function(req, res, next) {
     var email = req.body.email;
     var user = new User({
-      firstName: 'Marcel',
-      lastName: 'Renders',
-      password: 'badmuts',
-      email: email
+        firstName: 'Max',
+        lastName: 'Schwarz',
+        password: 'super-secret',
+        email: email
     });
     user.save();
     res.redirect('/');
