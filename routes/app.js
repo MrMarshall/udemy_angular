@@ -7,16 +7,23 @@ router.get('/', function (req, res, next) {
         if (err) {
             return res.send('Error!');
         }
-        res.render('node', {email: doc.email});
+        if (doc) {
+          res.render('node', {
+            email: doc.email,
+            firstName: doc.firstName
+          });
+        } else {
+          res.render('node', {email: 'No email address inserted yet'});
+        }
     });
 });
 
 router.post('/', function(req, res, next) {
     var email = req.body.email;
     var user = new User({
-        firstName: 'Max',
-        lastName: 'Schwarz',
-        password: 'super-secret',
+        firstName: 'Marcel',
+        lastName: 'Renders',
+        password: 'badmuts',
         email: email
     });
     user.save();
