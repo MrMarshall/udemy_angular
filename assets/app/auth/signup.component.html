@@ -1,1 +1,41 @@
-<h1>SignUp</h1>
+<div class="col-md-8 col-md-offset-2">
+  <form [formGroup]="testForm" (ngSubmit)="onSubmit(testForm)">
+    <div class="form-group">
+      <label for="firstname">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        FormControlName="firstname">
+    </div>
+    <!--
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        class="form-control"
+        FormControlName="lastName">
+    </div>
+    <div class="form-group">
+      <label for="email">Mail</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        FormControlName="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        class="form-control"
+        FormControlName="password">
+    </div> -->
+    <button
+      class="btn btn-primary"
+      type="submit"
+    >Submit</button>
+    <!--[disabled]="!myForm.valid"-->
+  </form>
+</div>
