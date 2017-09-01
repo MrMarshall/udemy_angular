@@ -8,8 +8,8 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
-    onSubmit(myForm) {
-        console.log(this.myForm);
+    onSubmit() {
+        console.log(this.myForm.value);
         this.myForm.reset();
     }
 
@@ -24,4 +24,5 @@ export class SignupComponent implements OnInit {
             password: new FormControl(null, Validators.required)
         });
     }
+
 }
