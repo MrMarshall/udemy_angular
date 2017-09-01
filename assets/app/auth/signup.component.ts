@@ -9,7 +9,7 @@ export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
     onSubmit() {
-        console.log(this.myForm.value);
+        console.log(this.myForm);
         this.myForm.reset();
     }
 
@@ -24,5 +24,4 @@ export class SignupComponent implements OnInit {
             password: new FormControl(null, Validators.required)
         });
     }
-
 }
